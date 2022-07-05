@@ -8,12 +8,8 @@ jobs:
     steps:
       - checkout
       - run: |
-         echo "pipeline ID -> $CI_PIPELINE_ID"
-         echo "job ID -> $CI_PIPELINE_IID"
-         echo "build version -> $BUILD_VERSION"
-         echo "project name -> $CI_PROJECT_NAME"
-         mvn clean package -DskipTests
-         echo 'build completed.....' 
+          mvn clean package -DskipTests
+          eho 'build completed.....' 
   test:
     working_directory: ~/circleci-python
     docker:
