@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: |
           mvn clean package -DskipTests
-          eho 'build completed.....' 
+          echo 'build completed.....' 
   test:
     working_directory: ~/circleci-python
     docker:
